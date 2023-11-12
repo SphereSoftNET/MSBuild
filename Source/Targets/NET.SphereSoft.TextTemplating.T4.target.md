@@ -7,6 +7,9 @@
 This target configures the parameters and imports the [Microsoft T4 `TextTemplating`](https://learn.microsoft.com/en-us/visualstudio/modeling/code-generation-and-t4-text-templates)
 targets for processing text templates (\*.tt) during build process.
 
+It requires the installed MBuild Component `Microsoft.VisualStudio.Component.TextTemplating`.
+Formerly package was known as "Modeling (And Visualization) SDK for Visual Studio".
+
 
 
 ## Template variables from MSBuild Properties
