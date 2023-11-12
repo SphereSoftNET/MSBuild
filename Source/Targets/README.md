@@ -14,7 +14,7 @@ Shows the known MSBuild Properties :point_right: [:page_facing_up:](NET.SphereSo
 
 ## MSBuild Target "TargetFrameworkVersionPreprocessorSymbols"
 
-Creates preprocessor constants for the target framework :point_right: [:page_facing_up:](NET.SphereSoft.TargetFrameworkVersionPreprocessorSymbols.target.md)
+Creates preprocessor constants for the target .NET Framework :point_right: [:page_facing_up:](NET.SphereSoft.TargetFrameworkVersionPreprocessorSymbols.target.md)
 
 
 

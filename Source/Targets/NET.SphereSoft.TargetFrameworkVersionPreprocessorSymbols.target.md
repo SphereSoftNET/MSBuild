@@ -4,7 +4,7 @@
 
 # MSBuild Target "TargetFrameworkVersionPreprocessorSymbols"
 
-This target creates preprocessor constants for the target framework like
+This target creates preprocessor constants for the target .NET Framework like
 Microsoft has introduced it to .NET (Core) ([Target frameworks in SDK-style projects
 \- Preprocessor symbols](https://learn.microsoft.com/en-us/dotnet/standard/frameworks#preprocessor-symbols)).
 In general the constant `NETFRAMEWORK` will be added and the version related
