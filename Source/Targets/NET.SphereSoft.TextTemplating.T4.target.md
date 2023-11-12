@@ -9,6 +9,15 @@ targets for processing text templates (\*.tt) during build process.
 
 
 
+## Template variables from MSBuild Properties
+
+For template processing the following variables get handover to be retrievable
+in MSBuild and Visual Studio builds:
+
+- `ProjectPath`
+
+
+
 ## Errors
 
 - When build property `MSBuildExtensionsPath32` is not set
