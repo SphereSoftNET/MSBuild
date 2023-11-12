@@ -25,6 +25,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\microsoft.wi
 C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\microsoft.windows.sdk.buildtools\<RevisionVersion>\bin\<Version>\x64\rc.exe
 ```
 
+Windows SDK BuildTools can obtained from nuget.org ([Microsoft.Windows.SDK.BuildTools](https://www.nuget.org/packages/Microsoft.Windows.SDK.BuildTools/)).
+
+
 
 ## Errors
 
