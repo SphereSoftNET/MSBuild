@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  <summary>
+  Compiles Windows resource file (*.rc) into Windows resource file (*.res)
+  </summary>
+  <revisionHistory>
+    <revision version="2023.11.11" date="2023-11-11" author="Holger Boskugel, github.com/SphereSoftNET">Initial implementation</revision>
+  </revisionHistory>
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="NET_SphereSoft_CompileWindowsResource" BeforeTargets="BeforeBuild">
+    <Error Text="Build Property &quot;RCToolPath&quot; not set! Include it in your project, build properties or targets." Condition="$(RCToolPath) == ''"/>
+    <Error Text="Tool &quot;$(RCToolPath)&quot; not found!. Set right tool path in Build Property &quot;RCToolPath&quot;." Condition="!Exists($(RCToolPath))"/>
+    <Error Text="Build Property &quot;WindowsResourceFileName&quot; not set! Include it in your project, build properties or targets." Condition="$(WindowsResourceFileName) == ''"/>
+
+    <PropertyGroup>
+      <WindowsResourceFilePath Condition="$(WindowsResourceFilePath) == ''">$(ProjectDir)$(WindowsResourceFileName)</WindowsResourceFilePath>
+    </PropertyGroup>
+
+    <Error Text="Windows Resource file &quot;$(WindowsResourceFilePath)&quot; not found!" Condition="!Exists($(WindowsResourceFilePath))"/>
+
+    <Exec Command="&quot;$(RCToolPath)&quot; /nologo &quot;$(WindowsResourceFilePath)&quot;"/>
+  </Target>
+</Project>

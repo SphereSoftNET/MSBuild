@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  <summary>
+  Transforms XML of app.config file with templates based on MSBuild property "Configuration" and environment variable "COMPUTERNAME"
+  </summary>
+  <remarks>Requires task "TransformXml" from Web Development Kit or imported task</remarks>
+  <revisionHistory>
+    <revision version="2023.06.13" date="2023-06-13" author="Holger Boskugel, github.com/SphereSoftNET">Initial implementation</revision>
+  </revisionHistory>
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="NET_SphereSoft_TransformXmlAppConfig" BeforeTargets="BeforeBuild">
+    <!-- Transform with default configuration "Debug", when exists -->
+    <Message Text="Apply template app.Debug.config ..." Importance="normal" Condition="Exists('app.config') And Exists('app.Debug.config')"/>
+    <TransformXml Condition="Exists('app.config') And Exists('app.Debug.config')" Source="app.config" Transform="app.Debug.config" Destination="app.config" />
+    <!-- Transform by computer specific configuration, when exists -->
+    <Message Text="Apply template app.$(Configuration).$(COMPUTERNAME).config ..." Importance="normal" Condition="Exists('app.config') And Exists('app.$(Configuration).$(COMPUTERNAME).config')"/>
+    <TransformXml Condition="Exists('app.config') And Exists('app.$(Configuration).$(COMPUTERNAME).config')" Source="app.config" Transform="app.$(Configuration).$(COMPUTERNAME).config" Destination="app.config" />
+    <!-- Transform by configuration without computer specific, when exists -->
+    <Message Text="Apply template app.$(Configuration).config ..." Importance="normal" Condition="Exists('app.config') And Exists('app.$(Configuration).config') And !Exists('app.$(Configuration).$(COMPUTERNAME).config')"/>
+    <TransformXml Condition="Exists('app.config') And Exists('app.$(Configuration).config') And !Exists('app.$(Configuration).$(COMPUTERNAME).config')" Source="app.config" Transform="app.$(Configuration).config" Destination="app.config" />
+  </Target>
+</Project>

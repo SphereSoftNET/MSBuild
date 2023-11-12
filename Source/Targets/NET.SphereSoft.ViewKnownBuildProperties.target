@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  <summary>
+  View known build propeties
+  </summary>
+  <revisionHistory>
+    <revision version="2023.11.12" date="2023-11-12" author="Holger Boskugel, github.com/SphereSoftNET">Initial implementation</revision>
+  </revisionHistory>
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="NET_SphereSoft_ViewKnownBuildProperties">
+  <Target Name="NET_SphereSoft_ViewKnownBuildProperties">
+    <Message Text="Build property &quot;AndroidTargetsPath&quot; : &quot;$(AndroidTargetsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;ConfigurationName&quot; : &quot;$(ConfigurationName)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;DevEnvDir&quot; : &quot;$(DevEnvDir)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;FrameworkSDKRoot&quot; : &quot;$(FrameworkSDKRoot)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;InnerBuildProperty&quot; : &quot;$(InnerBuildProperty)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;InnerBuildPropertyValues&quot; : &quot;$(InnerBuildPropertyValues)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;iOSTargetsPath&quot; : &quot;$(iOSTargetsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;IsGraphBuild&quot; : &quot;$(IsGraphBuild)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildAssemblyVersion&quot; : &quot;$(MSBuildAssemblyVersion)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildBinPath&quot; : &quot;$(MSBuildBinPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildDisableFeaturesFromVersion&quot; : &quot;$(MSBuildDisableFeaturesFromVersion)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildExtensionsPath&quot; : &quot;$(MSBuildExtensionsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildExtensionsPath32&quot; : &quot;$(MSBuildExtensionsPath32)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildExtensionsPath64&quot; : &quot;$(MSBuildExtensionsPath64)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildFileVersion&quot; : &quot;$(MSBuildFileVersion)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildFrameworkToolsPath&quot; : &quot;$(MSBuildFrameworkToolsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildFrameworkToolsPath32&quot; : &quot;$(MSBuildFrameworkToolsPath32)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildFrameworkToolsPath64&quot; : &quot;$(MSBuildFrameworkToolsPath64)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildInteractive&quot; : &quot;$(MSBuildInteractive)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildLastTaskResult&quot; : &quot;$(MSBuildLastTaskResult)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildNodeCount&quot; : &quot;$(MSBuildNodeCount)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildOverrideTasksPath&quot; : &quot;$(MSBuildOverrideTasksPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildProgramFiles32&quot; : &quot;$(MSBuildProgramFiles32)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildProjectDefaultTargets&quot; : &quot;$(MSBuildProjectDefaultTargets)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildProjectDirectory&quot; : &quot;$(MSBuildProjectDirectory)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildProjectDirectoryNoRoot&quot; : &quot;$(MSBuildProjectDirectoryNoRoot)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildProjectExtension&quot; : &quot;$(MSBuildProjectExtension)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildProjectFile&quot; : &quot;$(MSBuildProjectFile)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildProjectFullPath&quot; : &quot;$(MSBuildProjectFullPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildProjectName&quot; : &quot;$(MSBuildProjectName)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildRuntimeType&quot; : &quot;$(MSBuildRuntimeType)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildSDKsPath&quot; : &quot;$(MSBuildSDKsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildSemanticVersion&quot; : &quot;$(MSBuildSemanticVersion)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildStartupDirectory&quot; : &quot;$(MSBuildStartupDirectory)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildThisFile&quot; : &quot;$(MSBuildThisFile)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildThisFileDirectory&quot; : &quot;$(MSBuildThisFileDirectory)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildThisFileDirectoryNoRoot&quot; : &quot;$(MSBuildThisFileDirectoryNoRoot)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildThisFileExtension&quot; : &quot;$(MSBuildThisFileExtension)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildThisFileFullPath&quot; : &quot;$(MSBuildThisFileFullPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildThisFileName&quot; : &quot;$(MSBuildThisFileName)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildToolsPath&quot; : &quot;$(MSBuildToolsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildToolsPath32&quot; : &quot;$(MSBuildToolsPath32)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildToolsPath64&quot; : &quot;$(MSBuildToolsPath64)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildToolsVersion&quot; : &quot;$(MSBuildToolsVersion)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildUserExtensionsPath&quot; : &quot;$(MSBuildUserExtensionsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildVersion&quot; : &quot;$(MSBuildVersion)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildWarningsAsErrors&quot; : &quot;$(MSBuildWarningsAsErrors)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildWarningsAsMessages&quot; : &quot;$(MSBuildWarningsAsMessages)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;MSBuildWarningsNotAsErrors&quot; : &quot;$(MSBuildWarningsNotAsErrors)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;OutDir&quot; : &quot;$(OutDir)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;PlatformName&quot; : &quot;$(PlatformName)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;ProjectDir&quot; : &quot;$(ProjectDir)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;ProjectExt&quot; : &quot;$(ProjectExt)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;ProjectFileName&quot; : &quot;$(ProjectFileName)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;ProjectName&quot; : &quot;$(ProjectName)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;ProjectPath&quot; : &quot;$(ProjectPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;RoslynTargetsPath&quot; : &quot;$(RoslynTargetsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;SDK35ToolsPath&quot; : &quot;$(SDK35ToolsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;SDK40ToolsPath&quot; : &quot;$(SDK40ToolsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;SolutionDir&quot; : &quot;$(SolutionDir)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;SolutionExt&quot; : &quot;$(SolutionExt)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;SolutionFileName&quot; : &quot;$(SolutionFileName)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;SolutionName&quot; : &quot;$(SolutionName)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;SolutionPath&quot; : &quot;$(SolutionPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;TargetDir&quot; : &quot;$(TargetDir)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;TargetExt&quot; : &quot;$(TargetExt)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;TargetFileName&quot; : &quot;$(TargetFileName)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;TargetName&quot; : &quot;$(TargetName)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;TargetPath&quot; : &quot;$(TargetPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;VCTargetsPath&quot; : &quot;$(VCTargetsPath)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;VCTargetsPath10&quot; : &quot;$(VCTargetsPath10)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;VCTargetsPath11&quot; : &quot;$(VCTargetsPath11)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;VCTargetsPath12&quot; : &quot;$(VCTargetsPath12)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;VCTargetsPath14&quot; : &quot;$(VCTargetsPath14)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;VisualStudioVersion&quot; : &quot;$(VisualStudioVersion)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;VsInstallRoot&quot; : &quot;$(VsInstallRoot)&quot;" Importance="high"/>
+    <Message Text="Build property &quot;WindowsSDK80Path&quot; : &quot;$(WindowsSDK80Path)&quot;" Importance="high"/>
+  </Target>
+</Project>

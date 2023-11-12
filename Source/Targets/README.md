@@ -6,6 +6,12 @@
 
 
 
+## MSBuild Target "ViewKnownBuildProperties"
+
+Shows the known MSBuild Properties :point_right: [:page_facing_up:](NET.SphereSoft.ViewKnownBuildProperties.target.md)
+
+
+
 ## MSBuild Target "TargetFrameworkVersionPreprocessorSymbols"
 
 Creates preprocessor constants for the target framework :point_right: [:page_facing_up:](NET.SphereSoft.TargetFrameworkVersionPreprocessorSymbols.target.md)
@@ -21,6 +27,18 @@ Configures and Imports `TextTemplating` targets :point_right: [:page_facing_up:]
 ## MSBuild Target "CreateEmbedManifest"
 
 Creates COM (ActiveX) manifest from target output and ebends there also :point_right: [:page_facing_up:](NET.SphereSoft.CreateEmbedManifest.target.md)
+
+
+
+## MSBuild Target "CompileWindowsResource"
+
+Compiles a Windows Resource Script (*.rc) file into it's Windows Resource file (*.res) :point_right: [:page_facing_up:](NET.SphereSoft.CompileWindowsResource.target.md)
+
+
+
+## MSBuild Target "TransformXmlAppConfig"
+
+Transforms the XML of app.config file based on templates :point_right: [:page_facing_up:](NET.SphereSoft.TransformXmlAppConfig.target.md)
 
 
 

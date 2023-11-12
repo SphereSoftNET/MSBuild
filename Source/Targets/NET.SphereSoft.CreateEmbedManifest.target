@@ -9,12 +9,15 @@
   </revisionHistory>
 -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Target Name="SSN_CreateEmbedManifest" AfterTargets="Build">
-    <Error Text="Build Property &quot;MTToolPath&quot; not set! Include it in your project or build props or target." Condition="$(MTToolPath) == ''"/>
+  <Target Name="NET_SphereSoft_CreateEmbedManifest" AfterTargets="Build">
+    <Error Text="Build Property &quot;MTToolPath&quot; not set! Include it in your project, build properties or targets." Condition="$(MTToolPath) == ''"/>
     <Error Text="Tool &quot;$(MTToolPath)&quot; not found!. Set right tool path in Build Property &quot;MTToolPath&quot;." Condition="!Exists($(MTToolPath))"/>
+
     <Message Text="Create and embed manifest ..." Importance="normal" Condition="$(MTToolPath) != ''"/>
+
     <Exec Command="&quot;$(MTToolPath)&quot; -nologo -managedassemblyname:&quot;$(TargetPath)&quot; -nodependency -out:&quot;$(TargetDir)$(TargetName).manifest&quot; -verbose"/>
     <Exec Command="&quot;$(MTToolPath)&quot; -nologo -manifest &quot;$(TargetDir)$(TargetName).manifest&quot; -outputresource:&quot;$(TargetPath)&quot;"/>
+
     <Message Text="$(ProjectName) -&gt; $(TargetDir)$(TargetName).manifest" Importance="high"/>
   </Target>
 </Project>

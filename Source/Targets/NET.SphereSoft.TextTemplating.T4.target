@@ -3,15 +3,18 @@
   <summary>
   Processes T4 text templates
   </summary>
+  <remarks>
+  Requires T4 text templating component of Visual Studio Build Tools (Microsoft.VisualStudio.Component.TextTemplating)
+  or former Modeling (And Visualization) SDK for Visual Studio.
+  </remarks>
   <revisionHistory>
     <revision version="2023.11.11" date="2023-11-11" author="Holger Boskugel, github.com/SphereSoftNET">Initial implementation</revision>
   </revisionHistory>
 -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <!-- Requires Modeling (And Visualization) SDK for Visual Studio !!! -->
-  <Target Name="SSN_TextTemplatingT4" BeforeTargets="BeforeBuild">
-    <Error Text="Build Property &quot;MSBuildExtensionsPath32&quot; not set! Include it in your project or build props or target." Condition="$(MSBuildExtensionsPath32) == ''"/>
-    <Error Text="Build Property &quot;VisualStudioVersion&quot; not set! Include it in your project or build props or target." Condition="$(VisualStudioVersion) == ''"/>
+  <Target Name="NET_SphereSoft_TextTemplatingT4" BeforeTargets="BeforeBuild">
+    <Error Text="Build Property &quot;MSBuildExtensionsPath32&quot; not set! Include it in your project, build properties or targets." Condition="$(MSBuildExtensionsPath32) == ''"/>
+    <Error Text="Build Property &quot;VisualStudioVersion&quot; not set! Include it in your project, build properties or targets." Condition="$(VisualStudioVersion) == ''"/>
 
     <PropertyGroup>
       <VSToolsPath Condition="$(VSToolsPath) == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

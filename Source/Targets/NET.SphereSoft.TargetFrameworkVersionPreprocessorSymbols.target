@@ -8,7 +8,7 @@
   </revisionHistory>
 -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Target Name="SSN_TargetFrameworkVersionPreprocessorSymbol" BeforeTargets="BeforeBuild">
+  <Target Name="NET_SphereSoft_TargetFrameworkVersionPreprocessorSymbol" BeforeTargets="BeforeBuild">
     <PropertyGroup>
       <!-- See also https://learn.microsoft.com/en-us/dotnet/standard/frameworks#preprocessor-symbols -->
       <TargetFrameworkVersionPreprocessorSymbol Condition="$(TargetFrameworkVersion) == 'v4.8'">NET48</TargetFrameworkVersionPreprocessorSymbol>
