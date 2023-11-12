@@ -20,7 +20,7 @@ Creates preprocessor constants for the target framework :point_right: [:page_fac
 
 ## MSBuild Target "TextTemplating.T4"
 
-Configures and Imports `TextTemplating` targets :point_right: [:page_facing_up:](NET.SphereSoft.TextTemplating.T4.target.md)
+Configures and imports `TextTemplating` targets :point_right: [:page_facing_up:](NET.SphereSoft.TextTemplating.T4.target.md)
 
 
 
