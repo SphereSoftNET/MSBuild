@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  <summary>
+  Check the HTML Help 1 working directory to not.H contain a ".H" or ".h" in name
+  </summary>
+  <remarks>SHFB will show a warning during compilation only: "SHFB(0,0): warning BE0060: The file path '<Your HTML Help 1 output path>' contains a comma or '.h' which may cause the Help 1 compiler to fail."</remarks>
+  <revisionHistory>
+    <revision version="2023.11.11" date="2023-11-11" author="Holger Boskugel, github.com/SphereSoftNET">Initial implementation</revision>
+  </revisionHistory>
+-->
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="NET_SphereSoft_SHFB_CheckHtmlHelp1WorkingPath" BeforeTargets="CoreBuildHelp" Condition="$(HelpFileFormat.Contains('HtmlHelp1'))">
+    <PropertyGroup>
+      <HtmlHelp1OutputPath Condition="$([System.IO.Path]::IsPathRooted('$(OutputPath)'))">$([System.IO.Path]::GetFullPath('$(OutputPath)'))</HtmlHelp1OutputPath>
+      <HtmlHelp1OutputPath Condition="!$([System.IO.Path]::IsPathRooted('$(OutputPath)'))">$([System.IO.Path]::GetFullPath($([System.IO.Path]::Combine('$(ProjectDir)', '$(OutputPath)'))))</HtmlHelp1OutputPath>
+      <HtmlHelp1OutputPath Condition="!HasTrailingSlash('$(HtmlHelp1OutputPath)')">$(HtmlHelp1OutputPath)\</HtmlHelp1OutputPath>
+      <HtmlHelp1WorkingPath Condition="'$(WorkingPath)' == ''">$(HtmlHelp1OutputPath)</HtmlHelp1WorkingPath>
+      <HtmlHelp1WorkingPath Condition="'$(WorkingPath)' != ''">$(ProjectDir)</HtmlHelp1WorkingPath>
+      <HtmlHelp1WorkingPath Condition="$([System.IO.Path]::IsPathRooted('$(WorkingPath)'))">$([System.IO.Path]::GetFullPath('$(WorkingPath)'))</HtmlHelp1WorkingPath>
+      <HtmlHelp1WorkingPath Condition="!$([System.IO.Path]::IsPathRooted('$(WorkingPath)'))">$([System.IO.Path]::GetFullPath($([System.IO.Path]::Combine('$(HtmlHelp1WorkingPath)', '$([MSBuild]::ValueOrDefault('$(WorkingPath)', 'Working'))'))))</HtmlHelp1WorkingPath>
+    </PropertyGroup>
+
+    <Error Text="Your HTML Help 1 working path &quot;$(HtmlHelp1WorkingPath)&quot; contains a &quot;.H&quot; or &quot;.h&quot;. Change the &quot;Paths&quot; / &quot;Output Paths&quot; / &quot;Help content output path&quot; OR &quot;Working files path&quot; to a directory relative or absolute to your project directory, that not contains a &quot;.H&quot; or &quot;.h&quot;!" Condition="$(HtmlHelp1WorkingPath.Contains('.H')) or $(HtmlHelp1WorkingPath.Contains('.h'))"/>
+  </Target>
+</Project>

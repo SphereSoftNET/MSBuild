@@ -42,6 +42,12 @@ Transforms the XML of app.config file based on templates :point_right: [:page_fa
 
 
 
+## MSBuild Target SHFB "CheckHtmlHelp1WorkingPath"
+
+Prevents a build of HTML Help 1 file by SHFB when the working path contains a `.H` or `.h`. :point_right: [:page_facing_up:](SHFB/NET.SphereSoft.SHFB.CheckHtmlHelp1WorkingPath.target.md)
+
+
+
 <!-- FOOTER -->
 <hr style="height: 1px" />
 <span style="font-size: 0.7em">© SphereSoft.NET, Holger Boskugel, Berlin, Germany</span>
