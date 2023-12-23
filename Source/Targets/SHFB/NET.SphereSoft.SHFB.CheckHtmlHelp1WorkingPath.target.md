@@ -4,8 +4,8 @@
 
 # MSBuild Target SHFB "CheckHtmlHelp1WorkingPath"
 
-This target prevents a build of HTML Help 1 file by SHFB when the working path
-contains a `.H` or `.h`.
+This target for [Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB)
+prevents a build of HTML Help 1 file when the working path contains a `.H` or `.h`.
 
 
 
